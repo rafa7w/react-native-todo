@@ -1,9 +1,9 @@
-import { View, Text, Image, TextInput} from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from './styles'
 
 export function Home() {
   return (
-    <View >
+    <View style={styles.body}>
       <View style={styles.head}>
         <View style={styles.title}>
           <Image source={require('../../assets/rocket.png')}/>
@@ -12,7 +12,19 @@ export function Home() {
         </View>
       </View>
 
-      <TextInput />
+      <View style={styles.form}>
+        <TextInput 
+          style={styles.input}
+          placeholder='Adicione uma nova tarefa'
+          placeholderTextColor='#808080'
+        />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>
+            +
+          </Text>
+        </TouchableOpacity>
+      </View>
+      
     </View>
   )  
 }
