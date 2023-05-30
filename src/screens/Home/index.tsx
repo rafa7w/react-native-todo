@@ -32,10 +32,23 @@ export function Home() {
     setTasks(oldTasks => [...oldTasks, newTask]);
     setTaskText('')
   }
-  
-  function toggleTaskCheck(taskIdToBeChecked: number) {}
-  
-  function removeTask(taskIdToBeRemoved: number) {}
+
+  function removeTask(taskIdToBeRemoved: number) {
+    const filteredTasks = tasks.filter(task => task.id !== taskIdToBeRemoved);
+
+    setTasks(filteredTasks);
+  }
+
+  function toggleTaskCheck(taskIdToBeChecked: number) {
+    const immutableTasks = tasks.map(task => ({ ...task }));
+
+    const taskToBeUpdated = immutableTasks.find(task => task.id === taskIdToBeChecked);
+
+    if (taskToBeUpdated) {
+      taskToBeUpdated.isChecked = !taskToBeUpdated.isChecked;
+      setTasks(immutableTasks);
+    }
+  }
   
   return (
     <View >
@@ -58,7 +71,9 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Resume />
+      <Resume 
+        data={tasks}
+      />
       
       <List 
         data={tasks}

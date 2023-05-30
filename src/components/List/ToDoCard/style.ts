@@ -11,15 +11,22 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 10,
-        
     },
-    checkbox: {
+    check: {
+        fontSize: 14,
+        width: 235,
+        color: '#d8d8d8',
+        paddingRight: 8,
+        paddingLeft: 12, 
+        textDecorationLine: 'line-through'
+    },
+    uncheck: {
         height: 20,
         width: 20,
         marginLeft: 12,
         borderRadius: 50,
         borderColor: '#4EA8DE',
-        fontSize: 14
+        fontSize: 14,
     },
     task: {
         fontSize: 14,

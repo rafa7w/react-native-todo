@@ -7,7 +7,7 @@ type Props = {
     data: TaskProps[];
     removeTask: (taskIdToBeRemoved: number) => void;
     toggleTaskCheck: (taskIdToBeChecked: number) => void;
-  }
+}
 
 export function List({ data, removeTask, toggleTaskCheck }: Props) {
     return (
@@ -16,9 +16,9 @@ export function List({ data, removeTask, toggleTaskCheck }: Props) {
             keyExtractor={item => item.text}
             renderItem={({item}) => (
                 <ToDoCard 
-                    item={item}
+                    item={item}  
                     removeTask={removeTask}
-                    toggleTaskCheck={toggleTaskCheck}
+                    toggleTaskCheck={toggleTaskCheck}              
                 />
             )}
             showsVerticalScrollIndicator={false}
