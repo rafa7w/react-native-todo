@@ -14,8 +14,8 @@ export const styles = StyleSheet.create({
         
     },
     checkbox: {
-        height: 24,
-        width: 24,
+        height: 20,
+        width: 20,
         marginLeft: 12,
         borderRadius: 50,
         borderColor: '#4EA8DE',
