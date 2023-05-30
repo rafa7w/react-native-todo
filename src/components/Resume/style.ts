@@ -5,6 +5,8 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: 20,
+    marginTop: 10
   },
   box: {
     flexDirection: 'row',
