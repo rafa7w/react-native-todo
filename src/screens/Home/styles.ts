@@ -12,11 +12,16 @@ export const styles = StyleSheet.create({
     backgroundColor: '#262626',
     height: 56,
     borderRadius: 5,
-    color: '#f0f0f0',
+    color: '#F2F2F2',
     padding: 16,
     fontSize: 16,
     marginLeft: 20,
-    marginRight: 10
+    marginRight: 10,
+    borderWidth: 1
+  },
+  focus: {
+    borderColor: '#5E60CE',
+    borderWidth: 1
   },
   button: {
     width: 56,

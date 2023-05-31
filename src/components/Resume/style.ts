@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 20,
-    marginLeft: 20,
+    marginRight: 24,
+    marginLeft: 24,
     marginTop: 20
   },
   tagLeft: {

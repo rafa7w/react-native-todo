@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
         color: '#d8d8d8',
         paddingRight: 8,
         paddingLeft: 12, 
-        textDecorationLine: 'line-through'
+        textDecorationLine: 'line-through',
     },
     uncheck: {
         height: 20,

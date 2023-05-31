@@ -7,6 +7,9 @@ type Props = {
 }
 
 export function Resume({data}: Props) {
+  const doneTasks = data.filter(task => task.isChecked)
+  const doneTasksCount = doneTasks.length
+
   return (
     <View style={styles.container}>
       <View style={styles.box}>
@@ -16,7 +19,7 @@ export function Resume({data}: Props) {
 
       <View style={styles.box}>
         <Text style={styles.tagRight}>Concluídas</Text>
-        <Text style={styles.counter}>{}</Text>
+        <Text style={styles.counter}>{doneTasksCount}</Text>
       </View>
     </View>
   )

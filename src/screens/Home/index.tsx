@@ -15,6 +15,7 @@ export type TaskProps = {
 export function Home() {
   const [tasks, setTasks] = useState<TaskProps[]>([])
   const [taskText, setTaskText] = useState('')
+  const [isFocused, setIsFocused] = useState(false)
 
   
   function handleAddTask() {
@@ -49,13 +50,23 @@ export function Home() {
       setTasks(immutableTasks);
     }
   }
+
+  function handleFocus() {
+    setIsFocused(true);
+  }
+
+  function handleBlur() {
+    setIsFocused(false);
+  }
   
   return (
     <View >
       <Header />
       <View style={styles.form}>
         <TextInput 
-          style={styles.input}
+          style={isFocused ? {...styles.focus, ...styles.input } : styles.input }
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           placeholder='Adicione uma nova tarefa'
           placeholderTextColor='#808080'
           onChangeText={setTaskText}
